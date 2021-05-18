@@ -12,7 +12,9 @@ class FoodsController < ApplicationController
     redirect_to root_path
   end
 
-  def show; end
+  def show
+    @food = Food.find(params[:id])
+  end
 
   def edit; end
 
